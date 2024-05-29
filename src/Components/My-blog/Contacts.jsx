@@ -1,4 +1,5 @@
 import React, { useState } from 'react'; 
+import { Link } from "react-router-dom";
 import './Contacts.css';
 
 function Contacts() {
@@ -22,8 +23,8 @@ function Contacts() {
     // Check if there are any errors before setting isSubmit to true
     if (Object.keys(errors).length === 0) {
     setIsSubmit(true);
-  }
-};
+    } 
+  };
 
 
   // Validation form values
