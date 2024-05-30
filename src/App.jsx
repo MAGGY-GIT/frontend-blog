@@ -1,13 +1,14 @@
 import './App.css'
+import Contacts from './Pages/Contacts'
+import Homepage from './Pages/Homepage'
 
 
 function App() {
 
   return (
     <div>
-      <h1 className="text-3xl font-bold underline">
-      Hello world!
-    </h1>
+      <Homepage/>
+      <Contacts/>
     </div>
   )
 }
