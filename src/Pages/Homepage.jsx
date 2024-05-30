@@ -2,7 +2,10 @@ import React from 'react'
 
 function Homepage() {
   return (
-    <div>Homepage</div>
+    <div>
+      <div>Genre</div>
+      <div>Movie & Series List</div>
+    </div>
   )
 }
 
