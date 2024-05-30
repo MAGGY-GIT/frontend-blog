@@ -1,5 +1,6 @@
 import React from 'react'
 import GenreList from '../Components/GenreList'
+import MovieList from '../Components/MovieList'
 
 function Homepage() {
   return (
@@ -10,10 +11,12 @@ function Homepage() {
       */}
       <div className='hidden md:block'>
         <GenreList/>
+        <MovieList/>
       </div>
 
-      <div className=' col-span-4 md:col-span-3 bg-cyan-500'>Movie & Series List</div>
-
+      <div className=' col-span-4 md:col-span-3 bg-gray-200 text-[30px] font-bold rounded-lg'>Movie List</div>
+     
+     
     </div>
   )
 }

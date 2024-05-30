@@ -26,8 +26,10 @@ function GenreList() {
 
       {genreList.map((genre) => (
         /**iterate and design the genre list here */
-        <div key={genre.id}>
-          <h3>{genre.name}</h3>
+        <div key={genre.id} className='items-center mb-2 cursor-pointer hover:bg-gray-300 p-2 rounded-lg
+          group'>
+
+          <h3 className='group-hover:font-bold transition-all-ease-out duration-300'>{genre.name}</h3>
         </div>
       ))}
     </div>
