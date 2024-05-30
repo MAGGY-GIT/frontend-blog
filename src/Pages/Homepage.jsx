@@ -1,20 +1,54 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react';
 import GenreList from '../Components/GenreList'
-import MovieList from '../Components/MovieList'
+import Trending from '../Components/Trending';
 
 function Homepage() {
+  const [allMovieList, setAllMovieList]=useState();
+
+  useEffect(() => {
+    getMovieList();
+
+  }, []); // Empty dependency array to run once on mount
+
+  const getMovieList = () => {
+      /**will fetch movies list from tmdb database* */
+    fetch("https://api.themoviedb.org/3/trending/movie/day?api_key=c7e5e005fe52947a29f48774c04e5309")
+    .then(res => res.json())
+    .then(json => setAllMovieList(json.results));
+      /**shows the lists of movies*/
+  }
+
+  const getPopular = () => {
+    /**will fetch movies list from tmdb database* */
+    fetch("https://api.themoviedb.org/3/trending/movie/day?api_key=c7e5e005fe52947a29f48774c04e5309")
+    .then(res => res.json())
+    .then(json => console.log(json));
+      /**shows the lists of movies*/
+  }
+
+
   return (
     <div className='grid grid-cols-4 px-5'>
 
       {/**imports genrelists from components and services folder
        * any changes made in GenreList.jsx will render here
       */}
+
       <div className='hidden md:block'>
         <GenreList/>
-        <MovieList/>
       </div>
 
-      <div className=' col-span-4 md:col-span-3 bg-gray-200 text-[30px] font-bold rounded-lg'>Movie List</div>
+      <div className='col-span-4 md:col-span-3'>
+        
+        {allMovieList?.length > 0 ? (
+          <div>
+           <Trending movieList={allMovieList} />
+          </div>
+        ) : null}
+
+      </div>
+
+      <div className=' col-span-4 md:col-span-3 text-[30px] font-bold '>Movie List</div>
      
      
     </div>

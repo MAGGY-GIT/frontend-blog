@@ -36,10 +36,10 @@ body {
   margin: 0;
   min-width: 320px;
   min-height: 100vh;
-  background-color: #ffffff;
-  color: #1a1a1a;
+  background-color: #000;
+  color: #fff;
 }
-/*removed black background and changes font color*/
+/*removed black background and changes font color scraped for now*/
 
 h1 {
   font-size: 3.2em;
