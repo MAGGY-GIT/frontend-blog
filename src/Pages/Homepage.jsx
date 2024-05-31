@@ -5,8 +5,6 @@ import Trending from '../Components/Trending';
 
 function Homepage() {
   const [allMovieList, setAllMovieList]=useState();
-  const [allUpcomingList,setAllUpcomingList]=useState();
-
   useEffect(() => {
     getMovieList();
 

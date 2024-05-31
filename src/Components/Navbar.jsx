@@ -1,6 +1,4 @@
 import React from 'react'
-//imports images from folder
-//import movielogo from './../assets/Images/movielogo.png'
 
 //imports use of react-icons
 //icon name is in curly brackets
@@ -19,8 +17,12 @@ function Navbar() {
         <div className='tabs ml-auto group'>
           
           <ul className='flex items-center text-[20px] space-x-14 font-bold'>
-            <li>Homepage</li>
-            <li>Contacts</li>
+            <li>
+              <a href="/">Homepage</a>
+            </li>
+            <li>
+              <a href="/contacts">Contacts</a>
+            </li>
           </ul>
 
         </div>
