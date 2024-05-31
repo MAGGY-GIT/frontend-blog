@@ -5,7 +5,7 @@ function GenreList() {
   const [genreList, setGenreList] = useState([]);
 
   const getGenreList = () => {
-    /**will call on genres listand store it in this variable below* */
+    /**will call on genres list and store it in this variable below* */
     fetch("https://api.themoviedb.org/3/genre/movie/list?api_key=c7e5e005fe52947a29f48774c04e5309")
       .then(res => res.json())
       .then(json => setGenreList(json.genres));
